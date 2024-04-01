@@ -34,7 +34,7 @@
   <h1>What day is today?</h1>
   <button id="optionsButton" onclick="showAprilFoolsButton()">Show options</button>
   
-  <button id="aprilFoolsButton" onclick="showAprilFoolsText()" style="display: none;">April Fools</button>
+  <button id="aprilFoolsButton" onclick="showAprilFoolsTextAndRedirect()" style="display: none;">April Fools</button>
   
   <p id="aprilFoolsText" style="display: none;">APRIL FOOLS!</p>
   
@@ -42,21 +42,15 @@
     function showAprilFoolsButton() {
       document.getElementById("optionsButton").style.display = "none";
       document.getElementById("aprilFoolsButton").style.display = "block";
-      setTimeout(function() {
-        redirectToYouTube();
-      }, 3000);
     }
     
-    function showAprilFoolsText() {
+    function showAprilFoolsTextAndRedirect() {
       document.getElementById("aprilFoolsButton").style.display = "none";
       document.getElementById("aprilFoolsText").style.display = "block";
+      
       setTimeout(function() {
-        redirectToYouTube();
+        window.location.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
       }, 3000);
-    }
-    
-    function redirectToYouTube() {
-      window.location.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
     }
   </script>
 </body>
