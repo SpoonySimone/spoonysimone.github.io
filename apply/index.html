@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Today's Date</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    
+    #optionsButton {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    #aprilFoolsButton {
+      margin: 0 auto;
+      display: block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    #aprilFoolsText {
+      font-size: 72px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>What day is today?</h1>
+  <button id="optionsButton" onclick="showAprilFoolsButton()">Show options</button>
+  
+  <button id="aprilFoolsButton" onclick="showAprilFoolsText()" style="display: none;">April Fools</button>
+  
+  <p id="aprilFoolsText" style="display: none;">APRIL FOOLS!</p>
+  
+  <script>
+    function showAprilFoolsButton() {
+      document.getElementById("optionsButton").style.display = "none";
+      document.getElementById("aprilFoolsButton").style.display = "block";
+    }
+    
+    function showAprilFoolsText() {
+      document.getElementById("aprilFoolsButton").style.display = "none";
+      document.getElementById("aprilFoolsText").style.display = "block";
+    }
+  </script>
+</body>
+</html>
