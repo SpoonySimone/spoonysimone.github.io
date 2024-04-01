@@ -42,11 +42,21 @@
     function showAprilFoolsButton() {
       document.getElementById("optionsButton").style.display = "none";
       document.getElementById("aprilFoolsButton").style.display = "block";
+      setTimeout(function() {
+        redirectToYouTube();
+      }, 3000);
     }
     
     function showAprilFoolsText() {
       document.getElementById("aprilFoolsButton").style.display = "none";
       document.getElementById("aprilFoolsText").style.display = "block";
+      setTimeout(function() {
+        redirectToYouTube();
+      }, 3000);
+    }
+    
+    function redirectToYouTube() {
+      window.location.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
     }
   </script>
 </body>
